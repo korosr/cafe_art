@@ -1,8 +1,6 @@
-@extends('app')
-@section('title', 'about | アートギャラリーカフェ「CAFE & ART」')
+@extends('layouts.adminapp')
+@section('title', 'admin | アートギャラリーカフェ「CAFE & ART」')
 @section('content')
-<body id="about">
-@include('header')
 <div id="wrap">
 	<div class="content">
 		<div class="main-center">
@@ -58,6 +56,3 @@
 		</div>
 	</div>
 </div>
-<p id="page-top"><a href="#"><i class="fas fa-angle-up fa-3x"></i></a></p>
-</body>
-</html>
