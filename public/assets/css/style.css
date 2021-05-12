@@ -427,7 +427,7 @@ font-family: 'Font Awesome 5 Free';
 content: "\f107";
 color: lightgray;
 position: absolute;
-right: 320px;
+right: 380px;
 transition: all 0.2s ease-in-out;
 }
 
@@ -436,7 +436,7 @@ font-family: 'Font Awesome 5 Free';
 content: "\f106";
 color: lightgray;
 position: absolute;
-right: 320px;
+right: 380px;
 transition: all 0.2s ease-in-out;
 }
 

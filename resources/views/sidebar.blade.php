@@ -5,10 +5,8 @@
   </div>
   <!-- <div class="panel-body"> -->
   <ul class="nav nav-pills nav-stacked">
-  <li><a href=""><i class="glyphicon glyphicon-menu-right"></i> submenu1</a></li>
-  <li><a href=""><i class="glyphicon glyphicon-menu-right"></i> submenu2</a></li>
-  <li><a href=""><i class="glyphicon glyphicon-menu-right"></i> submenu3</a></li>
-  <li><a href=""><i class="glyphicon glyphicon-menu-right"></i> submenu4</a></li>
+  <li><a href=""><i class="glyphicon glyphicon-menu-right"></i> メニュー登録</a></li>
+  <li><a href=""><i class="glyphicon glyphicon-menu-right"></i> ギャラリー登録</a></li>
   </ul>
   <!-- </div> -->
 </div>
