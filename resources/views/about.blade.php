@@ -16,7 +16,7 @@
 					アートと供においしい珈琲が味わえるよう、厳選された挽きたての豆を、丁寧に一杯一杯ハンドドリップしています。
 					</p>
 				</div>
-				<img src="images/about_shop.jpg" alt="Cafe&Artの店内イメージ" class="store-image">
+				<img src="{{ asset('/assets/images/about_shop.jpg') }}" alt="Cafe&Artの店内イメージ" class="store-image">
 			</section>
 			<section class="open clearfix">
 				<div class="open-txt">

@@ -20,6 +20,10 @@ class GeneralPageController extends Controller
 
     //menuPage画面取得
     public function showMenuPage(){
+
+        //cafeメニュー取得
+        $cafes = 
+
         return view('menu');
     }
 

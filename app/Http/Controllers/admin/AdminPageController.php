@@ -13,6 +13,11 @@ class AdminPageController extends Controller
         return view('admintop');
     }
 
+    //menu登録画面取得
+    public function showMenuInsertPage(){
+        return view('adminmenu_insert');
+    }
+
     //Galleryトップ画面取得
     public function showGalleryTopPage(){
         $galleries = Gallery::all();

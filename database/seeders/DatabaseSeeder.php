@@ -15,5 +15,6 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(MenuCategoryTebleSeeder::class);
         $this->call(GalleryTebleSeeder::class);
+        $this->call(MenuTebleSeeder::class);
     }
 }

@@ -1,6 +1,11 @@
 @charset "utf-8";
 
 /* common */
+html {
+	overflow-x : hidden;
+	overflow-y : auto;
+}
+
 body {
 	margin: 0;
 	padding: 0;
@@ -8,6 +13,8 @@ body {
 	color: #333333;
 	font-size: 15px;
 	line-height: 2;
+	overflow-x : hidden;
+	overflow-y : auto;
 }
 
 p, h1, h2, h3, h4, h5, h6 {
@@ -458,7 +465,12 @@ color: #555;
 #wrap_admin {
 	clear: both;
 	background-color: #ffffff;
-	padding: 35px 0;
+
+}
+
+#wrap_admin h1 {
+	padding: 10px 0;
+
 }
 
 .imagePreview {
@@ -483,7 +495,7 @@ color: #555;
 }
 
 .main_admin {
-	width: 90%;
-	margin: 20px 10px;
+	width: 85%;
+	margin: 10px 10px 20px 10px;
 	float: left;
 }
