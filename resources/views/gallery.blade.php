@@ -8,7 +8,7 @@
 	<div class="main">
 		<h1>Gallery</h1>
 		<p>これまでに展示した作品を掲載しています。</p>
-		<section id="city">
+		<section>
 			<ul class="clearfix gallery-list">
 			@foreach($galleries as $gallery)
 				<li><img src="assets/images/{{$gallery->imgpath}}" alt=""></li>

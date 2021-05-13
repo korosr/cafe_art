@@ -299,13 +299,13 @@ a img:hover {
 	background-size: 100% auto;
 }
 
-#gallery .gallery-list li {
+.gallery-list li {
 	float: left;
 	list-style: none;
 	margin: 0 40px 20px 0;
 }
 
-#gallery .gallery-list li:nth-child(3n) {
+.gallery-list li:nth-child(3n) {
 	margin-right: 0; 
 }
 
@@ -476,4 +476,14 @@ color: #555;
 
 .radio_label {
 	margin-right: 20px;
+}
+
+#wrap_admin section {
+	margin: 20px;
+}
+
+.main_admin {
+	width: 90%;
+	margin: 20px 10px;
+	float: left;
 }

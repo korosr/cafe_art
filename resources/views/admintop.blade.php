@@ -3,7 +3,7 @@
 <div id="wrap_admin" class="clearfix">
 	<div class="content">
 		<div class="main">
-			<h1>メニュー登録</h1>
+			<h1>Menu</h1>
 			<form action="" method="post" enctype="multipart/form-data">
 				<div class="form-group form-inline">
 					<label for="menu_name">名前:</label>

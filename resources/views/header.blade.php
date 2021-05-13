@@ -8,7 +8,7 @@
         <li><a href="{{ route('general.menu')}}">Menu</a></li>
         <li><a href="{{ route('general.gallery')}}">Gallery</a></li>
         <li><a href="{{ route('general.contact')}}">Contact</a></li>
-        <li><a href="{{ url('/login') }}"><i class="fas fa-sign-in-alt"></i></a></li>
+        <li><a href="{{ route('admin.top') }}"><i class="fas fa-sign-in-alt"></i></a></li>
       </ul>
     </nav>
   </header>
