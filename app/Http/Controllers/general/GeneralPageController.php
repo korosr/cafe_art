@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\general;
 
 use App\Http\Controllers\Controller;
+use App\Models\Gallery;
 use Illuminate\Http\Request;
 
 class GeneralPageController extends Controller
@@ -24,6 +25,9 @@ class GeneralPageController extends Controller
 
     //galleryPage画面取得
     public function showGalleryPage(){
-        return view('gallery');
+
+        $galleries = Gallery::all();
+
+        return view('gallery', compact('galleries'));
     }
 }

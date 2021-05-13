@@ -21,7 +21,10 @@ Route::get('/about', [App\Http\Controllers\general\GeneralPageController::class,
 Route::get('/contact', [App\Http\Controllers\general\GeneralPageController::class, 'showContactPage'])->name('general.contact');
 Route::get('/menu', [App\Http\Controllers\general\GeneralPageController::class, 'showMenuPage'])->name('general.menu');
 Route::get('/gallery', [App\Http\Controllers\general\GeneralPageController::class, 'showGalleryPage'])->name('general.gallery');
+
+Route::group(['middleware' => 'auth'], function() {
 Route::get('/admintop', [App\Http\Controllers\admin\AdminPageController::class, 'showTopPage'])->name('admin.top');
+});
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
