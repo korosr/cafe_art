@@ -499,3 +499,11 @@ color: #555;
 	margin: 10px 10px 20px 10px;
 	float: left;
 }
+
+.main_admin table {
+	width: 60%;
+}
+
+.fonticon {
+	color: gray;
+}

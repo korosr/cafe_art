@@ -1,5 +1,5 @@
 @extends('app')
-@section('title', 'contact | アートギャラリーカフェ「CAFE & ART」')
+@section('title', 'menu | アートギャラリーカフェ「CAFE & ART」')
 @section('content')
 <body id="menu">
 @include('header')
@@ -11,31 +11,25 @@
 			<section id="special">
 				<h2 class="icon">Winter Special</h2>
 				<ul class="clearfix menu-list">
-					<li><img src="images/photograph-city-01.png" alt="1番"><p>StrawberryParfait 1,000yen</p></li>
-					<li><img src="images/photograph-city-02.png" alt="2番"><p>StrawberryParfait 1,000yen</p></li>
-					<li><img src="images/photograph-city-03.png" alt="3番"><p>StrawberryParfait 1,000yen</p></li>
+				@foreach($winter_specials as $winter_special)
+					<li><img src="assets/images/{{$winter_special->imgpath}}" alt=""><p>{{$winter_special->name}} ￥{{number_format($winter_special->fee)}}</p></li>
+            	@endforeach
 				</ul>
 			</section>
 			<section id="cafe">
 				<h2 class="icon">Cafe</h2>
 				<ul class="clearfix menu-list">
-					<li><img src="images/photograph-city-01.png" alt="1番"><p>BrendCoffee 500yen</p></li>
-					<li><img src="images/photograph-city-02.png" alt="2番"><p>BrendCoffee 500yen</p></li>
-					<li><img src="images/photograph-city-03.png" alt="3番"><p>BrendCoffee 500yen</p></li>
-					<li><img src="images/photograph-city-04.png" alt="4番"><p>BrendCoffee 500yen</p></li>
-					<li><img src="images/photograph-city-05.png" alt="5番"><p>BrendCoffee 500yen</p></li>
-					<li><img src="images/photograph-city-06.png" alt="6番"><p>BrendCoffee 500yen</p></li>
+				@foreach($cafes as $cafe)
+					<li><img src="assets/images/{{$cafe->imgpath}}" alt=""><p>{{$cafe->name}} ￥{{number_format($cafe->fee)}}</p></li>
+            	@endforeach
 				</ul>
 			</section>
 			<section id="foods">
 				<h2 class="icon">Foods</h2>
 				<ul class="clearfix menu-list">
-					<li><img src="images/photograph-beach-01.png" alt="1番"><p>Sandwitch 800yen</p></li>
-					<li><img src="images/photograph-beach-02.png" alt="2番"><p>Sandwitch 800yen</p></li>
-					<li><img src="images/photograph-beach-03.png" alt="3番"><p>Sandwitch 800yen</p></li>
-					<li><img src="images/photograph-beach-04.png" alt="4番"><p>Sandwitch 800yen</p></li>
-					<li><img src="images/photograph-beach-05.png" alt="5番"><p>Sandwitch 800yen</p></li>
-					<li><img src="images/photograph-beach-06.png" alt="6番"><p>Sandwitch 800yen</p></li>
+				@foreach($foods as $food)
+					<li><img src="assets/images/{{$food->imgpath}}" alt=""><p>{{$food->name}} ￥{{number_format($food->fee)}}</p></li>
+            	@endforeach
 				</ul>
 			</section>
 		</div>

@@ -21,5 +21,23 @@ class MenuTableSeeder extends Seeder
             'imgpath' => 'photograph-city-01.png',
             'category_id' => 1,
         ]);
+        DB::table('menus')->insert([
+            'name' => 'BrendCoffee',
+            'fee' => 500,
+            'imgpath' => 'photograph-city-02.png',
+            'category_id' => 2,
+        ]);
+        DB::table('menus')->insert([
+            'name' => 'Sandwitch',
+            'fee' => 800,
+            'imgpath' => 'photograph-city-03.png',
+            'category_id' => 3,
+        ]);
+        DB::table('menus')->insert([
+            'name' => 'CafeLatte',
+            'fee' => 600,
+            'imgpath' => 'photograph-city-04.png',
+            'category_id' => 2,
+        ]);
     }
 }

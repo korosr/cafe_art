@@ -25,6 +25,8 @@ Route::get('/gallery', [App\Http\Controllers\general\GeneralPageController::clas
 Route::group(['middleware' => 'auth'], function() {
     Route::get('/admintop', [App\Http\Controllers\admin\AdminPageController::class, 'showTopPage'])->name('admin.top');
     Route::get('/admin_menu_insert', [App\Http\Controllers\admin\AdminPageController::class, 'showMenuInsertPage'])->name('admin.menu_insert');
+    Route::get('/admin_menu_edit/{id}', [App\Http\Controllers\admin\AdminPageController::class, 'editMenuPage'])->name('admin.menu_edit');
+    Route::get('/admin_menu_delete/{id}', [App\Http\Controllers\admin\AdminPageController::class, 'deleteMenuPage'])->name('admin.menu_delete');
     Route::get('/admin_gallery', [App\Http\Controllers\admin\AdminPageController::class, 'showGalleryTopPage'])->name('admin.gallery');
     Route::get('/admin_gallery_insert', [App\Http\Controllers\admin\AdminPageController::class, 'insertGalleryTopPage'])->name('admin.gallery_insert');
 });
