@@ -5,7 +5,7 @@
 		<div class="main_admin">
 			<h1>Gallery登録</h1>
 			<p>展示作品を登録します。</p>
-			<form action="{{ route('admin.gallery_insert') }}" method="post" enctype="multipart/form-data">
+			<form action="{{ route('admin.gallery_add') }}" method="post" enctype="multipart/form-data">
 				<div class="col-sm-5">
 					@csrf
 					<div class="imagePreview"></div>
@@ -19,6 +19,7 @@
 						<input type="text" class="form-control" readonly="">
 					</div>
 				</div>
+				<input type="submit" class="btn btn-primary" value="登録">
 			</form>
 		</div>
 	</div>

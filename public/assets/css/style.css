@@ -2,8 +2,8 @@
 
 /* common */
 html {
-	overflow-x : hidden;
-	overflow-y : auto;
+	/* overflow-x : hidden;
+	overflow-y : auto; */
 }
 
 body {
@@ -157,7 +157,7 @@ footer small {
 }
 
 #index {
-	background-image: url(../images/index_bg.jpg);
+	background-image: url(../../storage/images/bg-index.jpg);
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-attachment: fixed;
@@ -172,7 +172,7 @@ footer small {
 
 /* about */
 #about {
-	background-image: url(../images/about_top.jpg);
+	background-image: url(../../storage/images/about_top.jpg);
 	background-repeat: no-repeat;
 	background-position: center top;
 	background-attachment: fixed;
@@ -299,7 +299,7 @@ a img:hover {
 
 /* Gallery */
 #gallery {
-	background-image: url(../images/gallery_top.jpg);
+	background-image: url(../../storage/images/gallery_top.jpg);
 	background-repeat: no-repeat;
 	background-position: center top;
 	background-attachment: fixed;
@@ -318,7 +318,7 @@ a img:hover {
 
 /* Menu */
 #menu {
-	background-image: url(../images/menu_top.jpg);
+	background-image: url(../../storage/images/menu_top.jpg);
 	background-repeat: no-repeat;
 	background-position: center top;
 	background-attachment: fixed;
@@ -343,7 +343,7 @@ a img:hover {
 
 /* contact */
 #contact {
-	background-image: url(../images/contact_top.jpg);
+	background-image: url(../../storage/images/contact_top.jpg);
 	background-repeat: no-repeat;
 	background-position: center top;
 	background-attachment: fixed;
@@ -498,12 +498,4 @@ color: #555;
 	width: 85%;
 	margin: 10px 10px 20px 10px;
 	float: left;
-}
-
-.main_admin table {
-	width: 60%;
-}
-
-.fonticon {
-	color: gray;
 }

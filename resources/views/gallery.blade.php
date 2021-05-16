@@ -11,7 +11,7 @@
 		<section>
 			<ul class="clearfix gallery-list">
 			@foreach($galleries as $gallery)
-				<li><img src="assets/images/{{$gallery->imgpath}}" alt=""></li>
+				<li><img src="storage/images/{{$gallery->imgpath}}" alt=""></li>
             @endforeach
 			</ul>
 		</section>

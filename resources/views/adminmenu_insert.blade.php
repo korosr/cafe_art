@@ -21,7 +21,6 @@
 				</div>
 				<div class="col-sm-5">
 					@csrf
-					<div class="imagePreview"></div>
 					<div class="input-group mt-sm-2">
 						<label class="input-group-btn">
 							<span class="btn btn-primary">
@@ -32,6 +31,7 @@
 						<input type="text" class="form-control" readonly="">
 					</div>
 				</div>
+				<input type="submit" class="btn btn-primary" value="登録">
 			</form>
 		</div>
 	</div>

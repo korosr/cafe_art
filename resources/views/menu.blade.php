@@ -12,7 +12,7 @@
 				<h2 class="icon">Winter Special</h2>
 				<ul class="clearfix menu-list">
 				@foreach($winter_specials as $winter_special)
-					<li><img src="assets/images/{{$winter_special->imgpath}}" alt=""><p>{{$winter_special->name}} ￥{{number_format($winter_special->fee)}}</p></li>
+					<li><img src="storage/images/{{$winter_special->imgpath}}" alt=""><p>{{$winter_special->name}} ￥{{number_format($winter_special->fee)}}</p></li>
             	@endforeach
 				</ul>
 			</section>
@@ -20,7 +20,7 @@
 				<h2 class="icon">Cafe</h2>
 				<ul class="clearfix menu-list">
 				@foreach($cafes as $cafe)
-					<li><img src="assets/images/{{$cafe->imgpath}}" alt=""><p>{{$cafe->name}} ￥{{number_format($cafe->fee)}}</p></li>
+					<li><img src="storage/images/{{$cafe->imgpath}}" alt=""><p>{{$cafe->name}} ￥{{number_format($cafe->fee)}}</p></li>
             	@endforeach
 				</ul>
 			</section>
@@ -28,7 +28,7 @@
 				<h2 class="icon">Foods</h2>
 				<ul class="clearfix menu-list">
 				@foreach($foods as $food)
-					<li><img src="assets/images/{{$food->imgpath}}" alt=""><p>{{$food->name}} ￥{{number_format($food->fee)}}</p></li>
+					<li><img src="storage/images/{{$food->imgpath}}" alt=""><p>{{$food->name}} ￥{{number_format($food->fee)}}</p></li>
             	@endforeach
 				</ul>
 			</section>

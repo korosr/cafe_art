@@ -3,10 +3,9 @@
 <head>
   <meta charset="utf-8">
   <title>@yield('title')</title>
-  <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Bitter:400,700&display=swap" rel="stylesheet">
   <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-  <link href="{{ asset('/assets/images/favicon.ico') }}" rel="shortcut icon">
+  <link href="storage/images/favicon.ico" rel="shortcut icon">
   <link rel="stylesheet" href="{{ asset('/assets/css/style.css') }}">
 </head>
   @yield('content')
@@ -27,13 +26,14 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/locale/ja.min.js" integrity="sha512-rElveAU5iG1CzHqi7KbG1T4DQIUCqhitISZ9nqJ2Z4TP0z4Aba64xYhwcBhHQMddRq27/OKbzEFZLOJarNStLg==" crossorigin="anonymous"></script>
   <!-- Moment.js -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0/js/tempusdominus-bootstrap-4.min.js"></script>
-  <script src="{{ asset('/assets/js/myscript.js') }}"></script>
+  
   <script type="text/javascript">
     $(function () {
       $('#datePicker').datetimepicker({locale: 'ja', dayViewHeaderFormat: 'YYYY年M月' ,format: 'YYYY/MM/DD'});
       $('#timePicker').datetimepicker({locale: 'ja', format: 'HH:mm'});
     });
   </script>
+  <script src="{{ asset('/assets/js/myscript.js') }}"></script>
 </body>
 
 </html>

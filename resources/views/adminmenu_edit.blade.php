@@ -37,9 +37,8 @@
 				</div>
 				<div class="col-sm-5">
 					@csrf
-					<div class="imagePreview">
-						<img src="assets/images/{{$menu->imgpath}}" alt="">
-					</div>
+					<img src="../storage/images/{{ $menu->imgpath }}" alt="">
+					<p>現在のMenu画像</p>
 					<div class="input-group mt-sm-2">
 						<label class="input-group-btn">
 							<span class="btn btn-primary">

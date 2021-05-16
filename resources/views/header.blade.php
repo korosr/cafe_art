@@ -1,6 +1,6 @@
 <header>
     <div class="logo">
-      <a href="{{ url('/') }}"><img src="{{ asset('/assets/images/cafe&art_m.png') }}" alt="CAFE&ART"></a>
+      <a href="{{ url('/') }}"><img src="storage/images/cafe&art_m.png" alt="CAFE&ART"></a>
     </div>
     <nav>
       <ul class="global-nav">

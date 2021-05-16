@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Gallery;
 use App\Models\Menu;
+use App\Http\Requests\GalleryRequest;
 
 class AdminPageController extends Controller
 {
@@ -23,6 +24,15 @@ class AdminPageController extends Controller
     //menu登録画面取得
     public function showMenuInsertPage(){
         return view('adminmenu_insert');
+    }
+
+    //menu登録処理
+    public function addMenuPage(Request $request, Galery $gallery){
+
+        $gallery->imgpath = $request->imgpath;
+        $gallery->save();
+
+        return redirect()->route('admin.top');
     }
 
     //menu編集画面取得
@@ -49,4 +59,16 @@ class AdminPageController extends Controller
 
         return view('admingallery_insert');
     }
+
+    //gallery登録処理
+    public function addGalleryPage(Request $request, Gallery $gallery){
+
+        if(isset($request->menu_img)){
+            $file_path = $request->file('menu_img')->store('public/images');
+            $gallery->imgpath = basename($file_path);
+            $gallery->save();
+        }
+        return redirect()->route('admin.gallery');
+    }
+
 }

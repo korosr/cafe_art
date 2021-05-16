@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Bitter:400,700&display=swap" rel="stylesheet">
   <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-  <link href="{{ asset('/assets/images/favicon.ico') }}" rel="shortcut icon">
+  <link href="storage/images/favicon.ico" rel="shortcut icon">
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" media="screen">
   <link href="/css/sticky-footer.css" rel="stylesheet" media="screen">
   <link rel="stylesheet" href="{{ asset('/assets/css/style.css') }}">
@@ -16,7 +16,7 @@
     <div class="container-fluid">
       <div class="navbar-header">
         <a class="navbar-brand" href="#">
-          <img alt="カフェ&アートロゴ" src="{{ asset('/assets/images/cafe&art_m.png') }}" style="height: 26px;">
+          <img alt="カフェ&アートロゴ" src="storage/images/cafe&art_m.png" style="height: 26px;">
         </a>
         <a class="navbar-brand" href="{{ route('logout') }}"
             onclick="event.preventDefault();
