@@ -1,4 +1,4 @@
-@extends('layouts.adminapp')
+@extends('layouts.adminapp_edit')
 @section('content')
 <div id="wrap_admin" class="clearfix">
 	<div class="content">
