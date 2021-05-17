@@ -6,7 +6,7 @@
 			<h1>Menu編集</h1>
 			<p>Menuを編集・削除します。</p>
 			<form action="{{ route('admin.menu_update') }}" method="post" enctype="multipart/form-data">
-			<input type="hidden" name="menu_id" value="{{ $menu->id }}" >
+				<input type="hidden" name="menu_id" value="{{ $menu->id }}" >
 				<div class="form-group form-inline">
 					<label for="menu_name">名前:</label>
 					<input type="text" id="menu_name" name="menu_name" class="form-control" value="{{ $menu->name }}" style="width:50%;">
@@ -51,8 +51,8 @@
 						<input type="text" class="form-control" readonly="">
 					</div>
 				</div>
-				<input type="submit" class="btn btn-primary" name="update" value="更新">
-				<input type="submit" class="btn btn-primary" name="delete" value="削除">
+				<button type="submit" class="btn btn-primary" name="update">更新</button>
+				<button type="submit" class="btn btn-primary" name="delete">削除</button>
 			</form>
 		</div>
 	</div>

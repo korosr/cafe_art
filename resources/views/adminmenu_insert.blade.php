@@ -36,7 +36,7 @@
 						<input type="text" class="form-control" readonly="">
 					</div>
 				</div>
-				<input type="submit" class="btn btn-primary" value="登録">
+				<button type="submit" class="btn btn-primary">登録</button>
 			</form>
 		</div>
 	</div>

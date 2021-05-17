@@ -47,11 +47,11 @@
 		</div>
 		<aside class="sidebar">
 			<section>
-					<ul>
-						<li><a href="menu.html#special">季節限定</a></li>
-						<li><a href="menu.html#cafe">Cafe</a></li>
-						<li><a href="menu.html#foods">Foods</a></li>
-					</ul>
+				<ul>
+					<li><a href="menu#special">季節限定</a></li>
+					<li><a href="menu#cafe">Cafe</a></li>
+					<li><a href="menu#foods">Foods</a></li>
+				</ul>
 			</section>
 		</aside>
 	</div>

@@ -3,7 +3,6 @@
 <head>
   <meta charset="utf-8">
   <title>admin | アートギャラリーカフェ「CAFE & ART」</title>
-  <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Bitter:400,700&display=swap" rel="stylesheet">
   <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
   <link href="storage/images/favicon.ico" rel="shortcut icon">
