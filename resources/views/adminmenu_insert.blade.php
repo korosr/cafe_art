@@ -4,19 +4,24 @@
 	<div class="content">
 		<div class="main_admin">
 			<h1>Menu登録</h1>
-			<form action="" method="post" enctype="multipart/form-data">
+			<p>Menuを登録します。</p>
+			<form action="{{ route('admin.menu_add') }}" method="post" enctype="multipart/form-data">
 				<div class="form-group form-inline">
 					<label for="menu_name">名前:</label>
 					<input type="text" id="menu_name" name="menu_name" class="form-control" style="width:50%;">
 				</div>
+				<div class="form-group form-inline">
+					<label for="menu_fee">値段:</label>
+					<input type="text" id="menu_fee" name="menu_fee" class="form-control" style="width:50%;">
+				</div>
 				<div class="form-group justify-content-between">
 					<div>
-						<input class="form-check-input radio_input" type="radio" name="category" class="category" value="1" checked>
-						<label class="form-check-label radio_label">ドリンク</label>
-						<input class="form-check-input radio_input" type="radio" name="category" class="category" value="2">
-						<label class="form-check-label radio_label">フード</label>
+						<input class="form-check-input radio_input" type="radio" name="category" class="category" value="2" checked>
+						<label class="form-check-label radio_label">Cafe</label>
+						<input class="form-check-input radio_input" type="radio" name="category" class="category" value="1">
+						<label class="form-check-label radio_label">Food</label>
 						<input class="form-check-input radio_input" type="radio" name="category" class="category" value="3">
-						<label class="form-check-label radio_label">期間限定</label>
+						<label class="form-check-label radio_label">WinterSpecial</label>
 					</div>
 				</div>
 				<div class="col-sm-5">

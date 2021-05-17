@@ -10,26 +10,38 @@
 			<p></p>
 			<section id="special">
 				<h2 class="icon">Winter Special</h2>
-				<ul class="clearfix menu-list">
-				@foreach($winter_specials as $winter_special)
-					<li><img src="storage/images/{{$winter_special->imgpath}}" alt=""><p>{{$winter_special->name}} ￥{{number_format($winter_special->fee)}}</p></li>
-            	@endforeach
+				@if(count($winter_specials) > 0)
+					<ul class="clearfix menu-list">
+					@foreach($winter_specials as $winter_special)
+						<li><img src="storage/images/{{$winter_special->imgpath}}" alt="" class="tail-img"><p>{{$winter_special->name}} ￥{{number_format($winter_special->fee)}}</p></li>
+					@endforeach
+				@else
+					<p>現在メニューがありません。</p>
+				@endif
 				</ul>
 			</section>
 			<section id="cafe">
 				<h2 class="icon">Cafe</h2>
-				<ul class="clearfix menu-list">
-				@foreach($cafes as $cafe)
-					<li><img src="storage/images/{{$cafe->imgpath}}" alt=""><p>{{$cafe->name}} ￥{{number_format($cafe->fee)}}</p></li>
-            	@endforeach
+				@if(count($cafes) > 0)
+					<ul class="clearfix menu-list">
+					@foreach($cafes as $cafe)
+						<li><img src="storage/images/{{$cafe->imgpath}}" alt="" class="tail-img"><p>{{$cafe->name}} ￥{{number_format($cafe->fee)}}</p></li>
+					@endforeach
+				@else
+					<p>現在メニューがありません。</p>
+				@endif
 				</ul>
 			</section>
 			<section id="foods">
 				<h2 class="icon">Foods</h2>
-				<ul class="clearfix menu-list">
-				@foreach($foods as $food)
-					<li><img src="storage/images/{{$food->imgpath}}" alt=""><p>{{$food->name}} ￥{{number_format($food->fee)}}</p></li>
-            	@endforeach
+				@if(count($foods) > 0)
+					<ul class="clearfix menu-list">
+					@foreach($foods as $food)
+						<li><img src="storage/images/{{$food->imgpath}}" alt="" class="tail-img"><p>{{$food->name}} ￥{{number_format($food->fee)}}</p></li>
+					@endforeach
+				@else
+					<p>現在メニューがありません。</p>
+				@endif
 				</ul>
 			</section>
 		</div>

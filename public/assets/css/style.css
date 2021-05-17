@@ -30,6 +30,11 @@ ul {
 	padding: 0;
 }
 
+.tail-img {
+	width: 220px;
+	height: 160px;
+}
+
 /* pagetop */
 #page-top {
 	position: fixed;

@@ -8,7 +8,7 @@
 		<section>
 			<ul class="clearfix gallery-list">
 			@foreach($galleries as $gallery)
-				<li><img src="storage/images/{{$gallery->imgpath}}" alt=""></li>
+				<li><a href="{{ route('admin.gallery_edit', ['id'=>$gallery->id]) }}"><img src="storage/images/{{$gallery->imgpath}}" alt="" class="tail-img"></a></li>
 			@endforeach
 			</ul>
 		</section>

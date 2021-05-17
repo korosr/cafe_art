@@ -9,10 +9,14 @@
 		<h1>Gallery</h1>
 		<p>これまでに展示した作品を掲載しています。</p>
 		<section>
-			<ul class="clearfix gallery-list">
-			@foreach($galleries as $gallery)
-				<li><img src="storage/images/{{$gallery->imgpath}}" alt=""></li>
-            @endforeach
+			@if(count($galleries) > 0)
+				<ul class="clearfix gallery-list">
+				@foreach($galleries as $gallery)
+					<li><img src="storage/images/{{$gallery->imgpath}}" alt="" class="tail-img"></li>
+				@endforeach
+			@else
+				<p>現在、掲載している作品はありません。</p>
+			@endif
 			</ul>
 		</section>
 	</div>

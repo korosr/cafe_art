@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Gallery;
 use App\Models\Menu;
+use App\Models\Galery;
 use App\Http\Requests\GalleryRequest;
 
 class AdminPageController extends Controller
@@ -27,10 +28,16 @@ class AdminPageController extends Controller
     }
 
     //menu登録処理
-    public function addMenuPage(Request $request, Galery $gallery){
+    public function addMenuPage(Request $request, Menu $menu){
 
-        $gallery->imgpath = $request->imgpath;
-        $gallery->save();
+        if(isset($request->menu_img)){
+            $file_path = $request->file('menu_img')->store('public/images');
+            $menu->imgpath = basename($file_path);
+        }
+        $menu->name = $request->menu_name;
+        $menu->fee = $request->menu_fee;
+        $menu->category_id = $request->category;
+        $menu->save();
 
         return redirect()->route('admin.top');
     }
@@ -39,6 +46,25 @@ class AdminPageController extends Controller
     public function editMenuPage($id){
         $menu = Menu::find($id);
         return view('adminmenu_edit', compact('menu'));
+    }
+
+    //menu編集処理
+    public function updateMenuPage(Request $request){
+        $menu = Menu::findOrFail($request->menu_id);
+        if($request->has('update')){
+            if(isset($request->menu_img)){
+                $file_path = $request->file('menu_img')->store('public/images');
+                $menu->imgpath = basename($file_path);
+            }
+            $menu->name = $request->menu_name;
+            $menu->fee = $request->menu_fee;
+            $menu->category_id = $request->category;
+            $menu->save();
+        }elseif($request->has('delete')){
+            $menu->delete();
+        }
+
+        return redirect()->route('admin.top');
     }
 
     //menu削除画面取得
@@ -63,11 +89,33 @@ class AdminPageController extends Controller
     //gallery登録処理
     public function addGalleryPage(Request $request, Gallery $gallery){
 
-        if(isset($request->menu_img)){
-            $file_path = $request->file('menu_img')->store('public/images');
+        if(isset($request->gallery_img)){
+            $file_path = $request->file('gallery_img')->store('public/images');
             $gallery->imgpath = basename($file_path);
             $gallery->save();
         }
+        return redirect()->route('admin.gallery');
+    }
+
+    //gallery編集画面取得
+    public function editGalleryPage($id){
+        $gallery = Gallery::find($id);
+        return view('admingallery_edit', compact('gallery'));
+    }
+
+    //gallery編集処理
+    public function updateGalleryPage(Request $request){
+        $gallery = Gallery::findOrFail($request->gallery_id);
+        if($request->has('update')){
+            if(isset($request->gallery_img)){
+                $file_path = $request->file('gallery_img')->store('public/images');
+                $gallery->imgpath = basename($file_path);
+                $gallery->save();
+            }
+        }elseif($request->has('delete')){
+            $gallery->delete();
+        }
+
         return redirect()->route('admin.gallery');
     }
 

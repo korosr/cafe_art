@@ -4,7 +4,9 @@
 	<div class="content">
 		<div class="main_admin">
 			<h1>Menu編集</h1>
-			<form action="" method="post" enctype="multipart/form-data">
+			<p>Menuを編集・削除します。</p>
+			<form action="{{ route('admin.menu_update') }}" method="post" enctype="multipart/form-data">
+			<input type="hidden" name="menu_id" value="{{ $menu->id }}" >
 				<div class="form-group form-inline">
 					<label for="menu_name">名前:</label>
 					<input type="text" id="menu_name" name="menu_name" class="form-control" value="{{ $menu->name }}" style="width:50%;">
@@ -37,7 +39,7 @@
 				</div>
 				<div class="col-sm-5">
 					@csrf
-					<img src="../storage/images/{{ $menu->imgpath }}" alt="">
+					<img src="../storage/images/{{ $menu->imgpath }}" alt="" class="tail-img">
 					<p>現在のMenu画像</p>
 					<div class="input-group mt-sm-2">
 						<label class="input-group-btn">
@@ -49,6 +51,8 @@
 						<input type="text" class="form-control" readonly="">
 					</div>
 				</div>
+				<input type="submit" class="btn btn-primary" name="update" value="更新">
+				<input type="submit" class="btn btn-primary" name="delete" value="削除">
 			</form>
 		</div>
 	</div>
