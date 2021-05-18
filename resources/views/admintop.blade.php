@@ -4,7 +4,7 @@
 	<div class="content">
 		<div class="main_admin">
 			<h1>Menu</h1>
-			<a href="{{ route('admin.menu_insert') }}" class="btn btn-primary" role="button" aria-pressed="true">Menu登録</a>
+			<a href="{{ route('admin.menu_insert') }}"><button type="button" class="btn btn-primary">Menu登録</button></a>
 			<p>登録されているメニューを表示します</p>
 			<h2 class="icon">Winter Special</h2>
 			<table class="table">
