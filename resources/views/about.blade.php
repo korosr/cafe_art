@@ -59,5 +59,4 @@
 	</div>
 </div>
 <p id="page-top"><a href="#"><i class="fas fa-angle-up fa-3x"></i></a></p>
-</body>
-</html>
+@endsection
