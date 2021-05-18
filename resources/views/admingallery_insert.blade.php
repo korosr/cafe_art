@@ -11,15 +11,16 @@
 					<div class="imagePreview"></div>
 					<div class="input-group mt-sm-2">
 						<label class="input-group-btn">
-							<span class="btn btn-primary">
+							<span class="btn btn-info">
 								画像選択
 								<input type="file" name="gallery_img" style="display:none" class="uploadFile">
 							</span>
 						</label>
 						<input type="text" class="form-control" readonly="">
 					</div>
+					<button type="submit" class="btn btn-primary submit-btn" name="back">キャンセル</button>
+					<button type="submit" class="btn btn-primary submit-btn" name="insert">登録</button>
 				</div>
-				<input type="submit" class="btn btn-primary" value="登録">
 			</form>
 		</div>
 	</div>

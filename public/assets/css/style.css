@@ -35,6 +35,11 @@ ul {
 	height: 160px;
 }
 
+.submit-btn {
+	margin-top: 40px;
+	margin-right: 20px;
+}
+
 /* pagetop */
 #page-top {
 	position: fixed;

@@ -14,16 +14,17 @@
 					<div class="imagePreview"></div>
 					<div class="input-group mt-sm-2">
 						<label class="input-group-btn">
-							<span class="btn btn-primary">
+							<span class="btn btn-info">
 								画像選択
 								<input type="file" name="gallery_img" style="display:none" class="uploadFile">
 							</span>
 						</label>
 						<input type="text" class="form-control" readonly="">
 					</div>
-				</div>
-				<input type="submit" class="btn btn-primary" name="update" value="更新">
-				<input type="submit" class="btn btn-primary" name="delete" value="削除">
+					<button type="submit" class="btn btn-primary submit-btn" name="back">戻る</button>
+					<button type="submit" class="btn btn-primary submit-btn" name="update">更新</button>
+					<button type="submit" class="btn btn-primary submit-btn" name="delete">削除</button>
+				</div>	
 			</form>
 		</div>
 	</div>

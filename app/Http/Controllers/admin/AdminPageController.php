@@ -29,16 +29,18 @@ class AdminPageController extends Controller
 
     //menu登録処理
     public function addMenuPage(Request $request, Menu $menu){
-
-        if(isset($request->menu_img)){
-            $file_path = $request->file('menu_img')->store('public/images');
-            $menu->imgpath = basename($file_path);
+        if($request->has('insert')){
+            if(isset($request->menu_img)){
+                $file_path = $request->file('menu_img')->store('public/images');
+                $menu->imgpath = basename($file_path);
+            }
+            $menu->name = $request->menu_name;
+            $menu->fee = $request->menu_fee;
+            $menu->category_id = $request->category;
+            $menu->save();
+        }else{
+            //戻るボタン押下
         }
-        $menu->name = $request->menu_name;
-        $menu->fee = $request->menu_fee;
-        $menu->category_id = $request->category;
-        $menu->save();
-
         return redirect()->route('admin.top');
     }
 
@@ -62,6 +64,8 @@ class AdminPageController extends Controller
             $menu->save();
         }elseif($request->has('delete')){
             $menu->delete();
+        }else{
+            //戻るボタン押下
         }
 
         return redirect()->route('admin.top');
@@ -89,10 +93,14 @@ class AdminPageController extends Controller
     //gallery登録処理
     public function addGalleryPage(Request $request, Gallery $gallery){
 
-        if(isset($request->gallery_img)){
-            $file_path = $request->file('gallery_img')->store('public/images');
-            $gallery->imgpath = basename($file_path);
-            $gallery->save();
+        if($request->has('insert')){
+            if(isset($request->gallery_img)){
+                $file_path = $request->file('gallery_img')->store('public/images');
+                $gallery->imgpath = basename($file_path);
+                $gallery->save();
+            }
+        }else{
+            //戻るボタン押下
         }
         return redirect()->route('admin.gallery');
     }
@@ -114,6 +122,8 @@ class AdminPageController extends Controller
             }
         }elseif($request->has('delete')){
             $gallery->delete();
+        }else{
+            //戻るボタン押下
         }
 
         return redirect()->route('admin.gallery');
