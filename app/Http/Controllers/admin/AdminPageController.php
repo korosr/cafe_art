@@ -8,6 +8,7 @@ use App\Models\Gallery;
 use App\Models\Menu;
 use App\Models\Galery;
 use App\Http\Requests\GalleryRequest;
+use App\Http\Requests\MenuRequest;
 
 class AdminPageController extends Controller
 {
@@ -28,18 +29,16 @@ class AdminPageController extends Controller
     }
 
     //menu登録処理
-    public function addMenuPage(Request $request, Menu $menu){
+    public function addMenuPage(MenuRequest $request, Menu $menu){
         if($request->has('insert')){
             if(isset($request->menu_img)){
                 $file_path = $request->file('menu_img')->store('public/images');
                 $menu->imgpath = basename($file_path);
             }
-            $menu->name = $request->menu_name;
+            $menu->name = $request->name;
             $menu->fee = $request->menu_fee;
             $menu->category_id = $request->category;
             $menu->save();
-        }else{
-            //戻るボタン押下
         }
         return redirect()->route('admin.top');
     }
@@ -51,21 +50,19 @@ class AdminPageController extends Controller
     }
 
     //menu編集処理
-    public function updateMenuPage(Request $request){
+    public function updateMenuPage(MenuRequest $request){
         $menu = Menu::findOrFail($request->menu_id);
         if($request->has('update')){
-            if(isset($request->menu_img)){
-                $file_path = $request->file('menu_img')->store('public/images');
+            if(isset($request->imgpath)){
+                $file_path = $request->file('imgpath')->store('public/images');
                 $menu->imgpath = basename($file_path);
             }
-            $menu->name = $request->menu_name;
-            $menu->fee = $request->menu_fee;
+            $menu->name = $request->name;
+            $menu->fee = $request->fee;
             $menu->category_id = $request->category;
             $menu->save();
         }elseif($request->has('delete')){
             $menu->delete();
-        }else{
-            //戻るボタン押下
         }
 
         return redirect()->route('admin.top');
@@ -91,16 +88,13 @@ class AdminPageController extends Controller
     }
 
     //gallery登録処理
-    public function addGalleryPage(Request $request, Gallery $gallery){
-
+    public function addGalleryPage(GalleryRequest $request, Gallery $gallery){
         if($request->has('insert')){
-            if(isset($request->gallery_img)){
-                $file_path = $request->file('gallery_img')->store('public/images');
+            if(isset($request->imgpath)){
+                $file_path = $request->file('imgpath')->store('public/images');
                 $gallery->imgpath = basename($file_path);
                 $gallery->save();
             }
-        }else{
-            //戻るボタン押下
         }
         return redirect()->route('admin.gallery');
     }
@@ -112,7 +106,7 @@ class AdminPageController extends Controller
     }
 
     //gallery編集処理
-    public function updateGalleryPage(Request $request){
+    public function updateGalleryPage(GalleryRequest $request){
         $gallery = Gallery::findOrFail($request->gallery_id);
         if($request->has('update')){
             if(isset($request->gallery_img)){
@@ -122,8 +116,6 @@ class AdminPageController extends Controller
             }
         }elseif($request->has('delete')){
             $gallery->delete();
-        }else{
-            //戻るボタン押下
         }
 
         return redirect()->route('admin.gallery');

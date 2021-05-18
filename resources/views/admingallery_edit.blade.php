@@ -11,17 +11,20 @@
 					@csrf
 					<img src="../storage/images/{{ $gallery->imgpath }}" alt="" class="tail-img">
 					<p>現在のMenu画像</p>
+					@if($errors->has('imgpath')) 
+						<span class="text-danger">{{ $errors->first('imgpath') }}</span>
+					@endif
 					<div class="imagePreview"></div>
 					<div class="input-group mt-sm-2">
 						<label class="input-group-btn">
 							<span class="btn btn-info">
 								画像選択
-								<input type="file" name="gallery_img" style="display:none" class="uploadFile">
+								<input type="file" name="imgpath" style="display:none" class="uploadFile">
 							</span>
 						</label>
-						<input type="text" class="form-control" readonly="">
+						<input type="text" class="form-control" readonly="" value="{{ $gallery->imgpath }}">
 					</div>
-					<button type="submit" class="btn btn-primary submit-btn" name="back">戻る</button>
+					<a href="{{ route('admin.gallery') }}"><button type="button" class="btn btn-primary submit-btn">キャンセル</button></a>
 					<button type="submit" class="btn btn-primary submit-btn" name="update">更新</button>
 					<button type="submit" class="btn btn-primary submit-btn" name="delete">削除</button>
 				</div>	

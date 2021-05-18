@@ -23,6 +23,27 @@ class GalleryRequest extends FormRequest
      */
     public function rules()
     {
-        return true;
+        $rules = [];
+        if($this->has('insert')){
+            $rules['imgpath'] = 'required';
+        }
+        return $rules;
+        // return [
+        //     'imgpath' => 'required',
+        // ];
+    }
+
+    public function attributes()
+    {
+        return [
+            'imgpath' => '画像',
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'imgpath.required' => ':attribute を選択してください',
+        ];
     }
 }
