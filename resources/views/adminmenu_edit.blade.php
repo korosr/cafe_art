@@ -26,15 +26,15 @@
 					<div class="form-group justify-content-between">
 						<div>
 							@if($menu->category_id == 2)
-								<input class="form-check-input radio_input" type="radio" name="category" class="category" value="1" checked>
-							@else
-								<input class="form-check-input radio_input" type="radio" name="category" class="category" value="1">
-							@endif
-							<label class="form-check-label radio_label">ドリンク</label>
-							@if($menu->category_id == 1)
 								<input class="form-check-input radio_input" type="radio" name="category" class="category" value="2" checked>
 							@else
 								<input class="form-check-input radio_input" type="radio" name="category" class="category" value="2">
+							@endif
+							<label class="form-check-label radio_label">ドリンク</label>
+							@if($menu->category_id == 1)
+								<input class="form-check-input radio_input" type="radio" name="category" class="category" value="1" checked>
+							@else
+								<input class="form-check-input radio_input" type="radio" name="category" class="category" value="1">
 							@endif
 							<label class="form-check-label radio_label">フード</label>
 							@if($menu->category_id == 3)
