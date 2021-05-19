@@ -4,7 +4,7 @@
 	<div class="content">
 		<div class="main_admin">
 			<h1>Menu登録</h1>
-			<p>Menuを登録します。</p>
+			<p>Menuを登録します</p>
 			<form action="{{ route('admin.menu_add') }}" method="post" enctype="multipart/form-data">
 			<div class="col-sm-7">				
 				@csrf

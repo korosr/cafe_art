@@ -1,11 +1,6 @@
 @extends('layouts.app')
 @section('title', 'admin | アートギャラリーカフェ「CAFE & ART」')
 @section('content')
-<header>
-    <div class="logo">
-      <a href="{{ url('/') }}"><img src="storage/images/cafe&art_m.png" alt="CAFE&ART"></a>
-    </div>
-</header>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">

@@ -8,25 +8,25 @@
 			<p>登録されているメニューを表示します</p>
 			<h2 class="icon">Winter Special</h2>
 			<table class="table">
-				<colgroup>
-					<col class="col-md-5">
-					<col class="col-md-2">
-					<col class="col-md-1">
-				</colgroup>
+				<!-- <colgroup>
+					<col class="col-sm-5">
+					<col class="col-sm-2">
+					<col class="col-sm-1">
+				</colgroup> -->
 			@foreach($winter_specials as $winter_special)
 				<tr>
-					<td>{{$winter_special->name}}</td>
-					<td>￥{{number_format($winter_special->fee)}}</td>
-					<td><a href="{{ route('admin.menu_edit', ['id'=>$winter_special->id]) }}"><i class="far fa-edit fonticon"></i></a></td>
+					<td class="col-sm-2">{{$winter_special->name}}</td>
+					<td class="col-sm-2">￥{{number_format($winter_special->fee)}}</td>
+					<td class="col-sm-1"><a href="{{ route('admin.menu_edit', ['id'=>$winter_special->id]) }}"><i class="far fa-edit fonticon"></i></a></td>
 				</tr>
 			@endforeach
 			</table>
 			<h2 class="icon">Cafe</h2>
 			<table class="table">
 				<colgroup>
-					<col class="col-md-5">
-					<col class="col-md-2">
-					<col class="col-md-1">
+					<col class="col-sm-5">
+					<col class="col-sm-2">
+					<col class="col-sm-1">
 				</colgroup>
 			@foreach($cafes as $cafe)
 				<tr>
@@ -39,9 +39,9 @@
 			<h2 class="icon">Food</h2>
 			<table class="table">
 				<colgroup>
-					<col class="col-md-5">
-					<col class="col-md-2">
-					<col class="col-md-1">
+					<col class="col-sm-5">
+					<col class="col-sm-2">
+					<col class="col-sm-1">
 				</colgroup>
 			@foreach($foods as $food)
 				<tr>

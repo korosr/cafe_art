@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="{{ asset('/assets/css/style.css') }}">
 </head>
 <body> 
-  <nav class="navbar navbar-default" style="background-color: gray;">
+  <nav class="navbar navbar-default navbar-expand-sm" style="background-color: gray;">
     <div class="container-fluid">
       <div class="navbar-header">
         <a class="navbar-brand" href="#">
