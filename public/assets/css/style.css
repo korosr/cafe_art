@@ -274,6 +274,10 @@ section {
 table {
 	border-spacing: 0;
 	border-collapse: collapse;
+	width: 100%;
+	table-layout: fixed;
+	word-break: break-all;
+	word-wrap: break-all;
 }
 
 /* Gallery&menu common */
