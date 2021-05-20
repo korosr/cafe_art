@@ -27,7 +27,7 @@
 					<a href="{{ route('admin.gallery') }}"><button type="button" class="btn btn-primary submit-btn">キャンセル</button></a>
 					<button type="submit" class="btn btn-primary submit-btn" name="update">更新</button>
 					<button type="submit" class="btn btn-primary submit-btn" name="delete">削除</button>
-				</div>	
+				</div>
 			</form>
 		</div>
 	</div>

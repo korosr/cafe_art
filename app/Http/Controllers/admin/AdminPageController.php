@@ -109,8 +109,8 @@ class AdminPageController extends Controller
     public function updateGalleryPage(GalleryRequest $request){
         $gallery = Gallery::findOrFail($request->gallery_id);
         if($request->has('update')){
-            if(isset($request->gallery_img)){
-                $file_path = $request->file('gallery_img')->store('public/images');
+            if(isset($request->imgpath)){
+                $file_path = $request->file('imgpath')->store('public/images');
                 $gallery->imgpath = basename($file_path);
                 $gallery->save();
             }
