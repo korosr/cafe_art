@@ -6,7 +6,7 @@
 			<h1>Menu登録</h1>
 			<p>Menuを登録します</p>
 			<form action="{{ route('admin.menu_add') }}" method="post" enctype="multipart/form-data">
-			<div class="col-sm-7">				
+				<div class="col-sm-7">				
 				@csrf
 				@if($errors->has('name')) 
 					<span class="text-danger">{{ $errors->first('name') }}</span>
@@ -39,7 +39,7 @@
 					<label class="input-group-btn">
 						<span class="btn btn-info">
 							画像選択
-							<input type="file" name="imgpath" style="display:none" class="uploadFile" value="{{ old('imgpath') }}">
+							<input type="file" name="imgpath" style="display:none" class="uploadFile form-control" value="{{ old('imgpath') }}" style="width:50%;">
 						</span>
 					</label>
 					<input type="text" class="form-control" readonly="">

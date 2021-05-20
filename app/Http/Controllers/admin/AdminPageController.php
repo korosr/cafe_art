@@ -31,12 +31,12 @@ class AdminPageController extends Controller
     //menu登録処理
     public function addMenuPage(MenuRequest $request, Menu $menu){
         if($request->has('insert')){
-            if(isset($request->menu_img)){
-                $file_path = $request->file('menu_img')->store('public/images');
+            if(isset($request->imgpath)){
+                $file_path = $request->file('imgpath')->store('public/images');
                 $menu->imgpath = basename($file_path);
             }
             $menu->name = $request->name;
-            $menu->fee = $request->menu_fee;
+            $menu->fee = $request->fee;
             $menu->category_id = $request->category;
             $menu->save();
         }

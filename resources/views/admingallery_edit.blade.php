@@ -6,7 +6,7 @@
 			<h1>Gallery編集</h1>
 			<p>展示作品を編集・削除します。</p>
 			<form action="{{ route('admin.gallery_update') }}" method="post" enctype="multipart/form-data">
-			<input type="hidden" name="gallery_id" value="{{ $gallery->id }}" >
+				<input type="hidden" name="gallery_id" value="{{ $gallery->id }}" >
 				<div class="col-sm-5">
 					@csrf
 					<img src="../storage/images/{{ $gallery->imgpath }}" alt="" class="tail-img">
