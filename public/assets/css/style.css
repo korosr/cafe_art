@@ -490,7 +490,7 @@ color: #555;
 }
 
 .imagePreview {
-	width: 100%;
+	width: 50%;
 	height: 200px;
 	background-position: center center;
 	background-size: cover;
@@ -514,4 +514,15 @@ color: #555;
 	width: 85%;
 	margin: 10px 10px 20px 10px;
 	float: left;
+}
+
+@media screen and (min-width:480px)  {
+	.imagePreview {
+		width: 100%;
+		height: 200px;
+		background-position: center center;
+		background-size: cover;
+		-webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, .3);
+		display: inline-block;
+	}
 }

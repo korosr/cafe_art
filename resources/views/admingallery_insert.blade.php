@@ -19,7 +19,7 @@
 								<input type="file" name="imgpath" style="display:none" class="uploadFile" value="{{ old('imgpath') }}">
 							</span>
 						</label>
-						<input type="text" class="form-control" readonly="">
+						<input type="text" class="form-control" readonly="" style="width: 45%;">
 					</div>
 					<a href="{{ route('admin.gallery') }}"><button type="button" class="btn btn-primary submit-btn">キャンセル</button></a>
 					<button type="submit" class="btn btn-primary submit-btn" name="insert">登録</button>

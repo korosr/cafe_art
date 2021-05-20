@@ -35,14 +35,14 @@
 				@if($errors->has('imgpath')) 
 					<span class="text-danger">{{ $errors->first('imgpath') }}</span>
 				@endif
-				<div class="input-group mt-sm-2">
+				<div class="input-group mt-sm-2　form-group">
 					<label class="input-group-btn">
 						<span class="btn btn-info">
 							画像選択
-							<input type="file" name="imgpath" style="display:none" class="uploadFile form-control" value="{{ old('imgpath') }}" style="width:50%;">
+							<input type="file" name="imgpath" style="display:none" class="uploadFile form-control" value="{{ old('imgpath') }}">
 						</span>
 					</label>
-					<input type="text" class="form-control" readonly="">
+					<input type="text" class="form-control" readonly="" style="width:45%;">
 				</div>
 				<a href="{{ route('admin.top') }}"><button type="button" class="btn btn-primary submit-btn">キャンセル</button></a>
 				<button type="submit" class="btn btn-primary submit-btn" name="insert">登録</button>
