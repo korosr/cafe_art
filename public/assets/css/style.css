@@ -33,6 +33,8 @@ ul {
 .tail-img {
 	width: 220px;
 	height: 160px;
+	margin: 0 auto;
+	padding: 0 15px;
 }
 
 .submit-btn {
@@ -135,6 +137,8 @@ footer {
 	color: #ffffff;
 	padding: 20px 0;
 	background-color: #767671;
+	/* position: absolute; */
+    bottom: 0; 
 }
 
 footer small {
@@ -282,7 +286,7 @@ table {
 
 /* Gallery&menu common */
 .main {
-	/* width: 90%; */
+	width: 90%;
 	margin: 0 10px;
 	float: left;
 }
@@ -311,6 +315,12 @@ a img:hover {
 	opacity: 0.8;
 }
 
+.img-box{
+	margin-top: 24px;
+    padding: 12px 4px;
+	text-align: center;
+}
+
 /* Gallery */
 #gallery {
 	background-image: url(../../storage/images/gallery_top.jpg);
@@ -319,18 +329,6 @@ a img:hover {
 	background-attachment: fixed;
 	background-size: 100% auto;
 }
-
-.gallery-list li {
-	float: left;
-	list-style: none;
-	margin: 0 40px 20px 0;
-}
-
-.gallery-list li:nth-child(3n) {
-	margin-right: 0; 
-}
-
-
 
 /* Menu */
 #menu {
@@ -355,6 +353,10 @@ a img:hover {
 #menu .menu-list p {
 	text-align: center;
 	margin-top: 10px;
+}
+
+#menu ul {
+	list-style: none;
 }
 
 /* contact */
@@ -454,7 +456,7 @@ font-family: 'Font Awesome 5 Free';
 content: "\f107";
 color: lightgray;
 position: absolute;
-right: 380px;
+right: 30%;
 transition: all 0.2s ease-in-out;
 }
 
@@ -463,7 +465,7 @@ font-family: 'Font Awesome 5 Free';
 content: "\f106";
 color: lightgray;
 position: absolute;
-right: 380px;
+right: 30%;
 transition: all 0.2s ease-in-out;
 }
 

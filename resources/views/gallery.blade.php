@@ -8,7 +8,7 @@
 		<div class="main">
 			<h1>Gallery</h1>
 			<p>これまでに展示した作品を掲載しています。</p>
-			<section>
+			<!-- <section>
 				@if(count($galleries) > 0)
 					<ul class="clearfix gallery-list">
 					@foreach($galleries as $gallery)
@@ -18,6 +18,19 @@
 					<p>現在、掲載している作品はありません。</p>
 				@endif
 				</ul>
+			</section> -->
+			<section>
+			@if(count($galleries) > 0)
+			@foreach($galleries as $gallery)
+				<div class="col-sm-6 col-md-4">
+					<div class="img-box">
+						<img src="storage/images/{{$gallery->imgpath}}" alt="" class="tail-img">
+					</div>
+				</div>
+			@endforeach
+			@else
+				<p>現在、掲載している作品はありません。</p>
+			@endif
 			</section>
 		</div>
 	</div>
